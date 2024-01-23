@@ -1,0 +1,1 @@
+<h2 class="title_admin">Chào mừng đến trang quản trị</h2>

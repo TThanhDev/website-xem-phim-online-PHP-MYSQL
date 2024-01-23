@@ -1,0 +1,419 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	display: flex;
+	background-color: #550000;
+}
+
+img {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+.icon {
+	top: 50px;
+}
+
+.wrapper{
+	width: 100%;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 10px 100px 10px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #660000;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	z-index: 999;
+}
+
+/* .logo img {
+	cursor: context-menu;
+} */
+
+.search {
+	position: relative;
+	border-bottom: 2px solid #CD9B1D;
+}
+
+.search .input_search {
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	color: #CD9B1D;
+}
+
+.search .submit_search {
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	color: #CD9B1D;
+	cursor: pointer;
+}
+
+.list_menu a {
+	color: #EEC900;
+	text-decoration: none;
+	position: relative;
+	font-size: 1.2em;
+	font-weight: 500;
+	margin-left: 40px;
+}
+
+ul.list_menu {
+	margin: 0;
+	line-height: 100%;
+	border-radius: 10px;
+	display: flex;
+	list-style: none;
+}
+
+
+
+/* drop down */
+.list_menu ul {
+	display: none;
+}
+
+.list_menu ul li:hover a,
+#list_menu li:hover li a {
+	background: #660000;
+	border: none;
+	color: #CD9B1D;
+}
+
+.list_menu li:hover>ul {
+	display: block;
+}
+
+/* level 2 */
+.list_menu ul {
+    display: none;
+	list-style: none;
+    position: absolute;
+    border: solid 1px #555;
+	background-color: #660000;
+    border-radius: 10px;
+	box-shadow:  0 0 30px rgba(0, 0, 0, 0.5);
+}
+.list_menu ul li {
+	padding: 20px 20px 10px 0 ;
+}
+
+.list_menu ul a {
+    text-shadow: 0 1px 0 #555;
+}
+
+.list_menu a:hover {
+	color: #CD9B1D;
+}
+
+.list_menu a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 3px;
+	background: #CD9B1D;
+	border-radius: 5px;
+	transform: scaleX(0);
+	transition: transform .5s;
+
+}
+
+.list_menu a:hover::after {
+	transform: scaleX(1);
+}
+
+
+
+
+
+
+
+/*--slideshow --*/
+
+.container {
+	position: relative;
+	margin: 95px 0 50px 0;
+	display: flex;
+	justify-content: center;
+	
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+	width: 95%;
+	box-shadow:  0 0 30px rgba(0, 0, 0, 1);
+	border-radius: 20px;
+  }
+
+  .mySlides img {
+	border-radius: 20px;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+	cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin: -50px 35px 0 35px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+  }
+  
+/* Position the "prev button" to the left */
+.prev {
+	left: 0;
+	border-radius: 3px 0 0 3px;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Container for image text */
+  .caption-container {
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
+  }
+  
+  .row{
+	position: absolute;
+	bottom: 0%;
+	left: 75px;
+  }
+
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* columns side by side */
+  .column {
+	float: left;
+	width: 16%;
+	margin-right: 5px;
+	border: solid 2px #f2f2f2;
+	border-radius: 20px;
+	box-shadow:  0 0  30px rgba(0, 0, 0, 0.5);
+  }
+  .column img {
+	border-radius: 20px;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+	opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+	opacity: 1;
+  }
+
+/*-- end slideshow --*/
+
+
+.main {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.sidebar{
+	width: 20%;
+	border: solid 2px #CD9B1D;
+	border-radius: 10px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.3);
+	float: left;
+	margin-top: 90px;
+	margin-right: 0;
+	margin-bottom: auto;
+	margin-left: 0;
+}
+
+.type_index{
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+ul.type_index li {
+	padding: 10px;
+}
+
+.type_index li a {
+	position: relative;
+	font-size: 1.5em;
+	color: #EEC900;
+	text-decoration: none;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.type_index li a:hover {
+	color: #CD9B1D;
+}
+
+.type_index li a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 100%;
+	height: 3px;
+	background: #CD9B1D;
+	border-radius: 5px;
+	transform: scaleX(0);
+	transition: transform .5s;
+
+}
+
+.type_index li a:hover::after {
+	transform: scaleX(1);
+}
+
+
+.list_movie{
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+h2 {
+	font-size: 2.5em;
+	color: #CD9B1D;
+	padding-bottom: 20px;
+	margin-top: 5px;
+	cursor: context-menu;
+	text-align: center;
+}
+
+ul.movie_box {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul.movie_box li {
+	display: list-item;
+	width: 20%;
+	border: 2px solid #8B6914;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	margin: 10px 30px 20px 25px;
+	list-style: none;
+}
+
+ul.movie_box li a {
+	color: #CD9B1D;
+	text-decoration: none;
+}
+
+.movie_img {
+	margin: 10px;
+}
+
+.movie_describe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.name {
+	text-decoration: none;
+	color: #CD9B1D;
+	font-size: 1.5em;
+	margin: 10px 0 5px 0;
+}
+
+.price {
+	color: #CD9B1D;
+	font-size: 1.2em;
+	margin: 5px 0 5px 0;
+	cursor: context-menu;
+}
+
+.btn_bookticket {
+	border: 2px solid #CD9B1D;
+	background-color: #CD9B1D;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1.2em;
+	color: #162938;
+	margin: 5px 0 10px 0;
+	padding: 10px;
+}
+
+
+
+/* FOOTER */
+
+.footer{
+	display: flex;
+	justify-content: center;
+	background-color: #330000;
+	align-items: center;
+}
+.footer_logo {
+	width: 30%;
+	padding: 20px;
+}
+.footer_menu{
+	width: 40%;
+	padding: 20px;
+}
+.footer_menu a {
+	color: #8B6914;
+	text-decoration: none;
+}
+.footer_contact{
+	width: 30%;
+	padding: 20px;
+	color: #8B6914;
+}
+.footer_contact a {
+	color: #8B6914;
+	text-decoration: none;
+	font-size: 2.5em;
+	padding-right: 10px;
+}
+
